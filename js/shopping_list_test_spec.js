@@ -10,7 +10,7 @@ describe('Shopping List Item', function () {
 	});
 
 	it('should be a function', function () {
-		item1.should.be.a('function');	
+		ShoppingListItem.should.be.a('function');	
 	});
 
 
@@ -26,11 +26,6 @@ describe('Shopping List Item', function () {
 	});
 
 	describe('Shopping List Item methods', function () {
-		var item1;
-		beforeEach(function () {
-			console.log('before each');
-			item1 = new ShoppingListItem('Apple','tasty red apple');
-		});
 				
 		it('should have the check function',function(){
 			item1.check();
