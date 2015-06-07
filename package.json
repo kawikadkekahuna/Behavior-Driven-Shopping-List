@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kawikadkekahuna/Behavior-Driven-Shopping-List/issues"
   },
-  "homepage": "https://github.com/kawikadkekahuna/Behavior-Driven-Shopping-List#readme"
+  "homepage": "https://github.com/kawikadkekahuna/Behavior-Driven-Shopping-List#readme",
+  "dependencies": {
+    "chai": "^3.0.0"
+  }
 }
