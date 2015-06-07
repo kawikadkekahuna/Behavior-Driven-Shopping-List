@@ -15,7 +15,7 @@ function ShoppingListItem(name, desc) {
 }
 
 function ShoppingList() {
-
+  this.items = [];
 }
 
 

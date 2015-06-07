@@ -10,14 +10,14 @@ describe('Shopping List Item', function () {
 	});
 
 	it('should be a function', function () {
-		ShoppingListItem.should.be.a('function');	
+		ShoppingListItem.should.be.a('function');
 	});
 
 
-	it('should have the correct property name',function(){	
+	it('should have the correct property name',function(){
 		item1.name.should.be.equal('Apple');
 	});
-	
+
 	it('should have the correct description',function(){
 		item1.description.should.be.equal('tasty red apple');
 	});
@@ -26,7 +26,7 @@ describe('Shopping List Item', function () {
 	});
 
 	describe('Methods', function () {
-				
+
 		it('should have the check function',function(){
 			item1.check();
 			item1.is_done.should.equal(true);
@@ -60,12 +60,12 @@ describe('Shopping List', function (){
 	});
 
 	describe('Properties', function () {
-		
+
 		it('should have the property items', function () {
-			list.items.should.have.property("items");
+			list.should.have.property("items");
 		});
 
 	});
 
-	
+
 });
