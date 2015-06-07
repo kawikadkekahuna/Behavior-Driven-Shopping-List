@@ -25,7 +25,7 @@ describe('Shopping List Item', function () {
 		(typeof item1.is_done).should.equal('undefined');
 	});
 
-	describe('Shopping List Item methods', function () {
+	describe('Methods', function () {
 				
 		it('should have the check function',function(){
 			item1.check();
@@ -46,4 +46,17 @@ describe('Shopping List Item', function () {
 		});
 	});
 
+});
+
+describe('Shopping List', function (){
+	var list;
+	beforeEach(function () {
+		list = new ShoppingList();
+	});
+
+	it('should be a function',function(){
+		ShoppingListItem.should.be.a('function');
+
+	});
+	
 });
