@@ -13,3 +13,10 @@ function ShoppingListItem(name, desc) {
     return html_string;
   }
 }
+
+function ShoppingList() {
+
+}
+
+
+
