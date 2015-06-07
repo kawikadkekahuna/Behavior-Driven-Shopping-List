@@ -1,6 +1,6 @@
 var expect = chai.expect;
 var should = chai.should();
-console.log('hi2');
+console.log('h121212i2');
 
 describe('Shopping List Item', function () {
 	var item1;
