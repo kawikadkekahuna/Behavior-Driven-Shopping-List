@@ -58,5 +58,14 @@ describe('Shopping List', function (){
 		ShoppingListItem.should.be.a('function');
 
 	});
+
+	describe('Properties', function () {
+		
+		it('should have the property items', function () {
+			list.items.should.have.property("items");
+		});
+
+	});
+
 	
 });
