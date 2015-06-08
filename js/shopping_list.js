@@ -16,6 +16,9 @@ function ShoppingListItem(name, desc) {
 
 function ShoppingList() {
   this.items = [];
+  this.addItem = function() {
+
+  };
 }
 
 
