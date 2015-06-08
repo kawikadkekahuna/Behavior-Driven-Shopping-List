@@ -74,6 +74,12 @@ describe('Shopping List', function (){
 			list.addItem.should.be.a("function");
 
 		});
+
+		it('addItem should add the object to the items array', function () {
+			var apple = new ShoppingListItem('Apple', 'Red Apple');
+			list.addItem(apple);
+			list.items.length.should.equal(1);
+		});
 	});
 
 });
