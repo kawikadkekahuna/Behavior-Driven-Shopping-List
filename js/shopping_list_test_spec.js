@@ -58,14 +58,22 @@ describe('Shopping List', function (){
 		ShoppingListItem.should.be.a('function');
 
 	});
-
 	describe('Properties', function () {
-
+		
 		it('should have the property items', function () {
 			list.should.have.property("items");
 		});
 
+		it('items should be an empty array', function(){
+			list.items.should.be.a('array');
+			list.items.should.have.length(0);
+		});
 	});
+	describe('Methods', function () {
+		it('should have the addItem method',function(){
+			list.addItem.should.be.a("function");
 
+		});
+	});
 
 });
