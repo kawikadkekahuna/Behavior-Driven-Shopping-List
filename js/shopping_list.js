@@ -21,7 +21,7 @@ this.removeItem = function(item) {
       this.items.pop();
     }
   }else{
-  throw new Error('Item is not in the Shopping List');
+  //throw new Error('Item is not in the Shopping List');
   }
 };
 this.render = function() {
