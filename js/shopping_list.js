@@ -1,8 +1,13 @@
 function ShoppingList() {
   this.items = [];
+  this.timestamps = [];
+
   this.addItem = function(item) {
+    var thisTimeStamp = Date.now();
   if (item instanceof ShoppingListItem) {
+    this.timestamps.push(thisTimeStamp);
     this.items.push(item);
+    item.timestamp = thisTimeStamp;
   } else {
     throw new Error('Item is not a ShoppingListItem');
   }

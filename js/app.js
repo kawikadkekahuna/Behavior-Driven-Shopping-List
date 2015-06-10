@@ -6,25 +6,24 @@ var description = document.getElementById('description');
 
 function add_to_shopping_list(){
 	var item = new ShoppingListItem(title.value,description.value);
-	var check = document.getElementById(item.name);
-	var renderedItem = item.render();
 	list.addItem(item);
+	var renderedItem = item.render();
 	content.innerHTML += renderedItem;
 }
-
-function changeCheckedStatus(idx,element){
-
-	
+//
+function changeCheckedStatus(id,checkboxId){
+	var compare = list.timestamps.indexOf(id);
+	if(list.items[compare].is_done){
+		list.items[compare].uncheck();
+	}else{
+		list.items[compare].check();
+	}
 
 }
-
+//Gathers the ID; Not sure why we need checkboxId.
 function changeShoppingListItemCheck(event){
-	console.log(event);
-	console.log('idx',event.target.id);
-	console.log('element',document.getElementById(event.target.id).checked);
-	var idx = event.target.id;
-	var element = document.getElementById(event.target.id);
-	console.log(element);
-	changeCheckedStatus(idx,element);
+	var id = parseInt(event.target.id);
+	var checkboxId = document.getElementById(id);
+	changeCheckedStatus(id,checkboxId);
 
 }
