@@ -1,26 +1,30 @@
-function ShoppingListItem(name, desc) {
-  this.name = name;
-  this.description = desc;
-  this.is_done;
-  this.check = function() {
-    this.is_done = true;
-  };
-  this.uncheck = function() {
-    this.is_done = false;
-  };
-  this.render = function() {
-    var html_string = '<ul><li class=completed_' + this.is_done + '><span>' + this.name + '</span><span>' + this.description + '</span></li></ul>';
-    return html_string;
-  };
-}
-
 function ShoppingList() {
   this.items = [];
   this.addItem = function(item) {
-    if (item instanceof ShoppingListItem) {
-      this.items.push(item);
-    } else {
-      throw new Error('Item is not a shoppingListItem');
+  if (item instanceof ShoppingListItem) {
+    this.items.push(item);
+  } else {
+    throw new Error('Item is not a ShoppingListItem');
+  }
+};
+
+this.removeItem = function(item) {
+  if (item instanceof ShoppingListItem && this.items.indexOf(item) !== -1) {
+    this.items.splice(this.items.indexOf(item), 1);
+  }else if (arguments.length === 0) {
+    if (this.items.length >= 1) {
+      this.items.pop();
     }
+  }else{
+  throw new Error('Item is not in the Shopping List');
+  }
+};
+this.render = function() {
+  var renderedShoppingList = '<ul>';
+  for (var i = 0; i < this.items.length; i++){
+    renderedShoppingList += this.items[i].render();
+    }
+    renderedShoppingList += '</ul>';
+    return renderedShoppingList;
   };
 }
